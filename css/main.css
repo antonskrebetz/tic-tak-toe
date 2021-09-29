@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: 1px solid #000;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: #222;
+}
+
+.header > * {
+  color: #eee;
+}
+
+.header__turn {
+  padding: 12px;
+}
+
+.header__status {
+  padding: 12px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header__restart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background: #ccc;
+  gap: 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.board__tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-family: cursive;
+  color: #222;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in;
+}
+
+.board__tile:hover {
+  background: #eee;
+}
+
+.board__tile--winner {
+  color: green;
+}
